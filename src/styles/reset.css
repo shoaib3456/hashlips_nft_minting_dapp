@@ -1,169 +1,118 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@font-face {
-  font-family: "coder";
-  src: local("coder"), url(font.woff) format("woff");
-}
-
-body {
-  margin: 0;
-  font-family: "coder", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  outline: none !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.fw-100 {
+  font-weight: 100;
 }
-
-body::-webkit-scrollbar {
-  display: none;
+.fw-200 {
+  font-weight: 200;
 }
-
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+.text-primary{
+    color: #00AE05 !important;
+}
+.text-faded {
+  opacity: 0.6;
+}
+.text-light{
+  color: white;
+}
+a {
+  text-decoration: none;
+}
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  background-image: url(../images/bg.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.logo{
+  width:40%;
+  border-radius: 15px;
+  margin-top: 50px;
+  mix-blend-mode: lighten;
+}
+.car-slider{
+  width: 100%;
+}
+.car-slide{
+  display: flex !important;
+  align-items: center;
+  min-height:30vw;
+}
+.car-slide img{
+  width: 100%;
+}
+.slick-arrow{
+  display: none !important;
+}
+.slick-slide{
+  height: 100%;
+  transform: scale(.7);
+  outline: none !important;
+}
+.slick-slide.slick-active.slick-center.slick-current{
+  transform: scale(1.5);
+  transition: .5s;
+}
+.ws-arrow{
+  width: 70px;
+  cursor: pointer;
+}
+.ws-btn{
+  cursor: pointer;
+  height: 60px;
+}
+.ws-controls{
+  margin-top: -100px;
+  z-index: 10;
+  position: relative;
 }
 
-html {
-  background-color: "#4C4C4C";
-}
-
-div {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -o-user-select: none;
+@media (max-width:991px ) {
+  .logo{
+    width:90%;
+  }
+  .car-slider{
+    margin: 70px 0;
+  }
+  .ws-controls{
+    margin-top: 0;
+    z-index: 10;
+    position: relative;
+  }
+  .ws-arrow{
+    width: 50px;
+  }
+  .ws-btn{
+    height: 40px;
+  }
 }
